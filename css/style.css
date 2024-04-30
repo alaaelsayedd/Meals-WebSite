@@ -1,0 +1,207 @@
+:root {
+  --body-bg-color: #0d0d0d;
+  --text-color: white;
+  --bg-span-color:#cff4fc;
+  --bg-span-border: #b6effb;
+  --span-color:#055160;
+  --bg-tag-color:#f8d7da;;
+  --bg-tag-span-border: #f5c2c7;;
+  --color-tag-span: #842029;;
+
+}
+body {
+  background-color: var(--body-bg-color);
+  color: white;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.slidebar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  z-index: 999;
+}
+.side-inner {
+  background-color: var(--body-bg-color);
+}
+
+.logo {
+  width: 50px;
+}
+ul li {
+  cursor: pointer;
+  position: relative;
+  top: 50%;
+  opacity: 0;
+}
+i {
+  cursor: pointer;
+}
+.side-out .icon i {
+  font-size: 35px;
+}
+
+.home-container div.col div.content {
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.home-container div.col .out {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.849);
+  color: black;
+  transition: 1s all;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  text-align: center;
+  border-radius: inherit;
+  transform: translateY(101%);
+  transition: 1s all;
+  padding: 5px;
+  overflow: hidden;
+}
+
+.home-container div.col div.content:hover .out {
+  transform: translateY(0);
+}
+.home-container div.col div.content:hover .out p {
+  text-align: center;
+  font-size: 15px;
+}
+.loading{
+  background-color: var(--body-bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top:0;
+  left:0;
+  right:0px;
+  bottom: 0;
+  z-index: 9999;
+}
+.loader {
+  color: #fff;
+  font-size: 15px;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  position: relative;
+  text-indent: -9999em;
+  animation: mulShdSpin 1.3s infinite linear;
+  transform: translateZ(0);
+  display: inline-block;
+  
+}
+
+@keyframes mulShdSpin {
+  0%,
+  100% {
+    box-shadow: 0 -3em 0 0.2em, 
+    2em -2em 0 0em, 3em 0 0 -1em, 
+    2em 2em 0 -1em, 0 3em 0 -1em, 
+    -2em 2em 0 -1em, -3em 0 0 -1em, 
+    -2em -2em 0 0;
+  }
+  12.5% {
+    box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 
+    3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, 
+    -2em 2em 0 -1em, -3em 0 0 -1em, 
+    -2em -2em 0 -1em;
+  }
+  25% {
+    box-shadow: 0 -3em 0 -0.5em, 
+    2em -2em 0 0, 3em 0 0 0.2em, 
+    2em 2em 0 0, 0 3em 0 -1em, 
+    -2em 2em 0 -1em, -3em 0 0 -1em, 
+    -2em -2em 0 -1em;
+  }
+  37.5% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+     3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, 
+     -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+  }
+  50% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+     3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, 
+     -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+  }
+  62.5% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+     3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, 
+     -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+  }
+  75% {
+    box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 
+    3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, 
+    -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+  }
+  87.5% {
+    box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 
+    3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, 
+    -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+  }
+}
+.incontent h3,h2{
+  font-weight: 500;
+  margin-block: 10px;
+  
+}
+ .recipes span, .tags span{
+  width: auto;
+  display: inline-block;
+  margin-inline: 5px;
+  border-radius: 7px;
+  padding: 5px;
+  margin-block: 5px;
+}
+input{
+  background-color: var(--body-bg-color) !important;
+  color: white !important;
+
+}
+input::placeholder{
+  color: lightgray !important;
+}
+.recipes span{
+  
+  background-color: var(--bg-span-color);
+  border: 1px solid var(--bg-span-border);
+  color: var(--span-color);
+
+}
+  .tags span{
+    background-color: var(--bg-tag-color);
+  border: 1px solid var(--bg-tag-span-border);
+  color: var(--color-tag-span);
+
+  }
+  
+  .contact-us  input{
+    background-color: white !important;
+    color: black !important;
+
+  }
+  .contact-us  input::placeholder{
+    color: darkgray !important;
+  }
+  .contact-us  p{
+    background-color:var(--bg-tag-color);
+    color: var(--color-tag-span);
+    text-align: center;
+   
+    transform: translateY(10%);
+    border-radius: 5px;
+
+  }
+  @media screen and (min-width: 720px) {
+    .contact-us-form {
+      transform: translateY(50%);
+    }
+  }
