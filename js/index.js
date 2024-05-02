@@ -88,13 +88,6 @@ class Meals {
             ingredients += `<span>${meal[`strMeasure${i}`]} ${meal[`strIngredient${i}`]}</span>`
         }
     }
-    // for (const [key, value] of Object.entries(mealdetailed.meals[0])) {
-    //   for (let i = 0; i < 20; i++) {
-    //     if (key === `strMeasure${i + 1}` && value != null && value != " ") {
-    //       recipesdata.push(`<span>${value}</span>`);
-    //     }
-    //   }
-    // }
 
     let ingrediant = `<div class="col-12 col-md-4">
        <div class="incontent">
