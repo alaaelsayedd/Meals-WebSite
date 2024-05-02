@@ -24,6 +24,7 @@ body {
   display: flex;
   flex-direction: row-reverse;
   z-index: 999;
+  background-color: var(--body-bg-color);
 }
 .side-inner {
   background-color: var(--body-bg-color);

@@ -37,7 +37,6 @@ document.querySelector(".icon i").addEventListener("click", (e) => {
       `${-outerSiderWidth}px`
     );
   } else {
-    console.log(outerSiderWidth);
     e.target.classList.replace("fa-bars", "fa-xmark");
     outerSilder.parentElement.style.setProperty("left", `0px`);
     $(".list-bar li").animate({ top: 0, opacity: 1 }, 2000);
@@ -46,8 +45,6 @@ document.querySelector(".icon i").addEventListener("click", (e) => {
 /*Display Meals */
 let mealsContainer = document.querySelector(".home-container");
 let ingrediantContainer = document.querySelector(".ingrediant-contsiner");
-
-// console.log(ingrediantContainer);
 class Meals {
   constructor() {
     this.meals;
@@ -88,13 +85,6 @@ class Meals {
             ingredients += `<span>${meal[`strMeasure${i}`]} ${meal[`strIngredient${i}`]}</span>`
         }
     }
-    // for (const [key, value] of Object.entries(mealdetailed.meals[0])) {
-    //   for (let i = 0; i < 20; i++) {
-    //     if (key === `strMeasure${i + 1}` && value != null && value != " ") {
-    //       recipesdata.push(`<span>${value}</span>`);
-    //     }
-    //   }
-    // }
 
     let ingrediant = `<div class="col-12 col-md-4">
        <div class="incontent">
